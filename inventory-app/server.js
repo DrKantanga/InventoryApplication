@@ -9,15 +9,15 @@ const PORT = process.env.PORT || 7000;
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
-// Mount inventoryController routes
+// Mounting my inventoryController routes
 app.use('/api', inventoryController);
 
-// Define a route for the home page
+// Defining a route for the home page
 app.get('/', (req, res) => {
   res.send('Welcome to the Inventory App!');
 });
 
-// Start the server
+// Starting the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
